@@ -37,3 +37,7 @@
      width: 40%;
      z-index: -4;
    }
+
+   @media (max-width:768px) {
+     
+   }

@@ -36,12 +36,17 @@
    }
    .activeNavbarLink{
      font-weight: 400;
-     color: #9438ea !important;
+     color: #ffffff !important;
      letter-spacing: 0.8px;
      padding: 0 25px;
      font-size: 18px;
      opacity: 0.75;
      margin-left: 5rem;
+     border-bottom: 2px solid #ffffff;
+     background-color: #d7a8f63c;
+     border-radius: 10px;
+     padding-left: 1rem;
+     padding-right: 1rem;
    }
    .navLink:hover,
    .navLink:active {

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import {ArrowRightCircle} from 'react-bootstrap-icons'
+import {ArrowDownCircle} from 'react-bootstrap-icons'
+import { BsDownload } from "react-icons/bs";
 import styles from './Banner.module.css'
-import headerImg from '../public/images/header-img.svg'
+
 
 function Banner() {
      const [loopNum, setLoopNum] = useState(0);
      const [isDeleting, setIsDeleting] = useState(false);
-     const toRotate = ["Web Developer", "Front End Developer", "Back End Developer","Web Designer", "Full-Stack Derveloper"]
+     const toRotate = ["A Web Developer", "A Front End Developer", "A Web Designer", "A Back End Developer", "A Full-Stack Developer"]
      const [text, setText] = useState('')
      const [delta, setDelta] = useState(300 - Math.random() * 100); 
      const period =2000
@@ -37,7 +38,7 @@ function Banner() {
           } else if(isDeleting && updatedText === ""){
               setIsDeleting(false);
               setLoopNum(loopNum +1);
-              setDelta(500)
+              setDelta(300)
           }
      }
      
@@ -48,9 +49,10 @@ function Banner() {
                <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7} >
                          <span className={styles.tagline}>Welcome to My Portfolio</span>
-                         <h1>{`Hi I'm David`} <span className={styles.wrap}>{text}</span> </h1>
+                         <h1>{`Hi I'm David`} </h1>
+                         <h1><span className={styles.wrap}>{text}</span></h1>
                          <p>I am a profound and astute full-stack developer, who is passionate about building solutions and keen on problem-solving. </p>
-                         <button onClick={()=> console.log('connect')}>Let's Connect <ArrowRightCircle size={25}/> </button>
+                         <button className={styles.downloadBtn} onClick={()=> console.log('connect')}>Download CV <BsDownload size={25}/> </button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                          <img src={'/images/header-img.svg'} alt="Header Image" />

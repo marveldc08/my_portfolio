@@ -39,3 +39,5 @@ installed dependencies
 
 npm i react-bootstrap bootstrap 
 npm install @mui/material @emotion/react @emotion/styled
+ npm install express cors nodemailer   (for sending mail)
+  npm i react-mailchimp-subscribe  (for subscribing to newsletter)

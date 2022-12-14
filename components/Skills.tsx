@@ -44,7 +44,7 @@ function Skills() {
                                    </div>
                                    <div className={styles.item}>
                                         <img src="/images/meter3.svg" alt="Image" />
-                                        <h5>Web Development</h5>
+                                        <h5>Node.JS</h5>
                                    </div>
                                    <div className={styles.item}>
                                         <img src="/images/meter1.svg" alt="Image" />
