@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import NavBar from '../components/NavBar'
 import Banner from '../components/Banner'
 import Skills from '../components/Skills'
+import Projects from '../components/Projects'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <NavBar />
         <Banner />
         <Skills />
+        <Projects />
       </main>
 
       <footer className={styles.footer}>
