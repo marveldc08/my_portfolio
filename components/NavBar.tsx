@@ -12,7 +12,7 @@ import { Button } from 'react-bootstrap';
 import logo from '../public/images/logo.svg';
 import navIcon1 from  '../public/images/nav-icon1.svg';
 import navIcon2 from  '../public/images/nav-icon2.svg';
-import navIcon3 from  '../public/images/nav-icon3.svg';
+import navIcon3 from  '../public/images/github.svg';
 
 
 function NavBar() {
@@ -36,7 +36,7 @@ function NavBar() {
      <Navbar expand="lg" className={scrolled ? styles.navbarScrolled : styles.navbar}>
       <Container>
         <Navbar.Brand className={styles.navbarBrand} href="#home">
-          <Image src={logo} alt='Logo' width={200} height={200} />
+          <Image src={'/images/david-chinye-logo.png'} alt='Logo' width={200} height={200} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -48,12 +48,14 @@ function NavBar() {
           </Nav>
           <div className={styles.navText}>
                <div className={styles.socialIcon}>
-                    <Link className={styles.socialIconLink}  href={''}><Image src={navIcon1} alt='icon' width={100} height={100} /></Link>
-                    <Link className={styles.socialIconLink} href={''}><Image src={navIcon2} alt='icon' width={100} height={100} /></Link>
-                    <Link className={styles.socialIconLink} href={''}><Image src={navIcon3} alt='icon' width={100} height={100} /></Link>
+                    <Link className={styles.socialIconLink} target='_blank'  href={'https://linkedin.com/in/david-c-15303320b'}><Image src={navIcon1} alt='icon' width={100} height={100} /></Link>
+                    <Link className={styles.socialIconLink} target='_blank' href={'https://web.facebook.com/david.chinye.5/'}><Image src={navIcon2} alt='icon' width={100} height={100} /></Link>
+                    <Link className={styles.socialIconLink} target='_blank' href={'https://github.com/marveldc08'}><img src={'/images/github.svg'} alt='icon'  /></Link>
                </div>
           </div>
-          <Button className={styles.navbarTextButton} onClick={()=> console.log('connect')}> <span className={styles.navbarTextButtonSpan} >Let's Connect</span> </Button>
+          <Link href={'#connect'}>
+               <Button className={styles.navbarTextButton}> <span className={styles.navbarTextButtonSpan} >Let's Connect</span> </Button>
+          </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -32,7 +32,7 @@ function Skills() {
                     <Col>
                          <div className={styles.skillBx}>
                               <h2>Skills</h2>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolorem culpa eius assumenda autem asperiores reprehenderit, voluptatum libero odio sunt minima accusamus laboriosam necessitatibus harum omnis consequuntur quos dignissimos suscipit?</p>
+                              <p> I’m a fast learner, able to pick up new skills and juggle different projects and roles with relative ease. I have been able to seemlessly use these technologies and more...</p>
                               <Carousel responsive={responsive} infinite={true} className={styles.skillSlider}>
                                    <div className={styles.item}>
                                         <img src="/images/meter1.svg" alt="Image" />
@@ -53,6 +53,10 @@ function Skills() {
                                    <div className={styles.item}>
                                         <img src="/images/meter2.svg" alt="Image" />
                                         <h5>MSSQL</h5>
+                                   </div>
+                                   <div className={styles.item}>
+                                        <img src="/images/meter3.svg" alt="Image" />
+                                        <h5>Next.JS</h5>
                                    </div>
                               </Carousel>
                          </div>

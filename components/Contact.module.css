@@ -74,3 +74,20 @@
    .contact form button:hover::before {
      width: 100%;
    }
+   .errorWrap{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   .error{
+     display: flex;
+     justify-content: center;
+     justify-self: center;
+     align-items: center;
+     background: linear-gradient(90.21deg, #ec1c99 -5.91%, #7e040e 111.58%);
+     color: #fff;
+     width: 60%;
+     text-align: center;
+     margin-bottom: 2rem;
+     border-radius: 10px;
+   }

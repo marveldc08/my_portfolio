@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import {ArrowDownCircle} from 'react-bootstrap-icons'
 import { BsDownload } from "react-icons/bs";
 import styles from './Banner.module.css'
+// import hh from '../public/resume(3).pdf'
 
 
 function Banner() {
@@ -52,7 +53,7 @@ function Banner() {
                          <h1>{`Hi I'm David`} </h1>
                          <h1><span className={styles.wrap}>{text}</span></h1>
                          <p>I am a profound and astute full-stack developer, who is passionate about building solutions and keen on problem-solving. </p>
-                         <button className={styles.downloadBtn} onClick={()=> console.log('connect')}>Download CV <BsDownload size={25}/> </button>
+                         <a href='David_Resume.pdf' download={'David_Resume.pdf'} className={styles.downloadBtn} onClick={()=> console.log('connect')}>Download CV <BsDownload size={25}/> </a>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                          <img src={'/images/header-img.svg'} alt="Header Image" />

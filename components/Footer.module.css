@@ -69,15 +69,25 @@
    .footer img {
      width: 26%;
    }
-   .social-icon img{
-     width: 5%;
-     height: 5%;
+   .social-icon{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
    }
+   .social-icon a{
+    margin-left: 1rem;
+   }
+   .social-icon img{
+     width: 100%;
+     height: 100%;
+   }
+  
    .footer p {
      font-weight: 400;
      font-size: 14px;
      color: #B8B8B8;
      letter-spacing: 0.5px;
      margin-top: 20px;
+     margin-left: 2em;
    }
    

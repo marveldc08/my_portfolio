@@ -8,6 +8,70 @@ function Projects() {
           {
                title: "Business Startup",
                description: 'Design & Development',
+               imgUrl: '/images/pj1.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/pj2.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/pj3.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/pj4.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/pj5.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/pj6.png'
+          },
+     ]
+     const secondProjects = [
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/project-img1.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/project-img2.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/project-img3.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/project-img1.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/project-img2.png'
+          },
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
+               imgUrl: '/images/project-img3.png'
+          },
+     ]
+     const thirdProjects = [
+          {
+               title: "Business Startup",
+               description: 'Design & Development',
                imgUrl: '/images/project-img1.png'
           },
           {
@@ -44,7 +108,7 @@ function Projects() {
                <Row>
                     <Col>
                          <h2>Projects</h2>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, vero quam. Vitae blanditiis velit sit vero magnam, ullam doloremque adipisci obcaecati. Libero placeat, eos beatae tempora quaerat provident corporis corrupti!</p>
+                         <p> Here are Some of the projects I have worked on. Building these awesome projects have been such blissful experience for Me. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</p>
                               <Tab.Container id={'projectsTab'} defaultActiveKey="first" >
                                    <Nav variant="pills" className={`${styles['nav-pills']} ${styles["nav"]}`} defaultActiveKey={'/home'}>
                                         <Nav.Item className={`${styles["nav-item"]}`} onClick={()=> setActive('one')}>
@@ -69,8 +133,28 @@ function Projects() {
                                                   }
                                              </Row>
                                         </Tab.Pane>
-                                        <Tab.Pane eventKey={'second'} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempora qui nihil dignissimos dolore perspiciatis maxime suscipit! Provident nemo ducimus qui. Ea repellat corporis veniam dicta ut optio non odit?</Tab.Pane>
-                                        <Tab.Pane eventKey={'third'} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem blanditiis, mollitia ipsum nesciunt harum repudiandae molestiae nostrum nulla a voluptas voluptatum unde pariatur velit aliquam saepe suscipit possimus eaque id.</Tab.Pane>
+                                        <Tab.Pane eventKey={'second'} >
+                                             <Row>
+                                                  {
+                                                       secondProjects.map((project, index) => {
+                                                            return ( 
+                                                            <ProjectCard key={index} {...project} />
+                                                            )
+                                                       })
+                                                  }
+                                             </Row>
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey={'third'} >
+                                             <Row>
+                                                  {
+                                                       thirdProjects.map((project, index) => {
+                                                            return ( 
+                                                            <ProjectCard key={index} {...project} />
+                                                            )
+                                                       })
+                                                  }
+                                             </Row>
+                                        </Tab.Pane>
                                    </Tab.Content>
                               </Tab.Container>
                     </Col>
