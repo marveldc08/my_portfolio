@@ -1,14 +1,16 @@
 /************ Skills Css ************/
 .skill {
-     padding: 0 0 50px 0;
+     /* padding: 0 0 50px 0; */
      position: relative;
+     border: 1px solid red;
    }
    .skillBx {
      background: #151515;
      border-radius: 64px;
      text-align: center;
-     padding: 60px 50px;
+     /* padding: 60px 50px; */
      margin-top: -60px;
+     border: 1px solid red;
    }
    .skill h2 {
         font-size: 45px;
@@ -22,14 +24,14 @@
        margin: 14px 0 75px 0;
    }
    .skillSlider {
-     width: 80%;
+     width: 100%;
      margin: 0 auto;
      position: relative;
    }
-   .skillSlider .item img {
+   /* .skillSlider .item img {
      width: 50%;
      margin: 0 auto 15px auto;
-   }
+   } */
    .backgroundImgLeft {
      top: 28%;
      position: absolute;
@@ -39,5 +41,9 @@
    }
 
    @media (max-width:768px) {
-     
+     .skill{
+          padding: 0;
+          width: 100%;
+          border: 1px solid red;
+     }
    }

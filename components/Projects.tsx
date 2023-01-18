@@ -106,9 +106,9 @@ function Projects() {
     <section className={styles.project} id={'projects'} > 
           <Container>
                <Row>
-                    <Col>
-                         <h2>Projects</h2>
-                         <p> Here are Some of the projects I have worked on. Building these awesome projects have been such blissful experience for Me. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</p>
+                    <Col >
+                              <h2>Projects</h2>
+                              <p> Here are Some of the projects I have worked on. Building these awesome projects have been such blissful experience for Me. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</p>
                               <Tab.Container id={'projectsTab'} defaultActiveKey="first" >
                                    <Nav variant="pills" className={`${styles['nav-pills']} ${styles["nav"]}`} defaultActiveKey={'/home'}>
                                         <Nav.Item className={`${styles["nav-item"]}`} onClick={()=> setActive('one')}>
