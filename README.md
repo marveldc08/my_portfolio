@@ -38,3 +38,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 installed dependencies
 
 npm i react-bootstrap bootstrap 
+npm install @mui/material @emotion/react @emotion/styled
+ npm install express cors nodemailer   (for sending mail)
+  npm i react-mailchimp-subscribe  (for subscribing to newsletter)
+  npm i animate.css  (for animations)
+  npm i react-on-screen  (for starting animation on screen)
+npm i emailjs (for sending email)
+npm i @emailjs/browser

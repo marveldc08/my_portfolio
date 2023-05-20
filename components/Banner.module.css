@@ -1,0 +1,169 @@
+/************ Banner Css ************/
+.banner {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 0;
+     padding: 260px 55px 100px ;
+     background-image: url('../public/images/banner-bg.png') !important;
+     background-position: top center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     width: 100vw;
+     height: 100%;
+
+}
+.banner .tagline {
+     font-weight: 700;
+     letter-spacing: 0.8px;
+     padding: 8px 10px;
+     background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: 10px;
+     font-size: 20px;
+     margin-bottom: 16px;
+     display: inline-block;
+}
+.banner h1 {
+     font-size: 65px;
+     font-weight: 700;
+     letter-spacing: 0.8px;
+     line-height: 1;
+     margin-bottom: 20px;
+     display: block;
+     color: #fff ;
+}
+/* .banner h2 {
+     font-size: 65px;
+     font-weight: 700;
+     letter-spacing: 0.8px;
+     line-height: 1;
+     margin-bottom: 20px;
+     display: block;
+     color: #fff ;
+} */
+.banner p {
+     color: #B8B8B8;
+     font-size: 18px;
+     letter-spacing: 0.8px;
+     line-height: 1.5em;
+     width: 96%;
+}
+.banner a {
+     color: #fff;
+     font-weight: 700;
+     font-size: 20px;
+     margin-top: 60px;
+     letter-spacing: 0.8px;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+}
+.banner a svg {
+     font-size: 25px;
+     margin-left: 10px;
+     transition: 0.3s ease-in-out;
+     line-height: 1;
+}
+/* .banner a:hover svg {
+     width: 50%;
+} */
+.banner img {
+     animation: updown 3s linear infinite;
+}
+ .rollTextWrap{
+          margin-top: -15px;
+          margin-bottom: 40px;
+          height: 3rem;
+     } 
+.downloadBtn{
+     font-weight: 700;
+     letter-spacing: 0.8px;
+     padding: 8px 18px;
+     background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+     border: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: 20px;
+     font-size: 20px;
+     margin-bottom: 16px;
+     display: inline-block;
+     width: 30%;
+}
+.downloadBtn:hover{
+     background: transparent;
+     color: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+}
+@keyframes updown {
+     0% {
+          transform: translateY(-20px);
+     }
+     50% {
+          transform: translateY(20px);
+     }
+     100% {
+          transform: translateY(-20px);
+     }
+}
+.txt-rotate > .wrap {
+     border-right: 0.08em solid #666;
+}
+
+@media screen and (max-width : 768px) {
+     .banner h1 span {
+          font-size: 30px;
+          font-weight: 500;
+          margin-bottom: 2px;
+          line-height: 0;
+          
+     }
+     .rollTextWrap{
+          margin-top: -15px;
+          height: 3rem;
+          align-items: flex-start;
+
+     }
+     .banner h1{
+          font-size: 45px;
+          font-weight: 600;
+          letter-spacing: 0.6px;
+          line-height: 1;
+          margin-bottom: 20px;
+     }
+     .banner{
+          padding: 100px 5px 10px ;
+     }
+     .downloadBtn{
+          font-size: 18px;
+          width: 60%;
+     }
+}
+@media screen and (max-width : 468px){
+         .banner h1 span {
+               font-size: 26px;
+               font-weight: 500;
+               margin-bottom: 1px;
+               
+          }
+          .content{
+               font-size: 18px;
+               padding: 20px;
+          }
+          .banner h1{
+               font-size: 39px;
+          }
+}
+
+      @media screen and (min-width: 768px)and (max-width: 1024px){
+             .downloadBtn{
+                    font-size: 18px;
+                    width: 90%;
+              }
+               .banner h1 span {
+                    font-size: 39px;
+                    font-weight: 500;
+                    margin-bottom: 1px;
+                    
+               }
+                .banner h1{
+                    font-size: 53px;
+               }
+      }
