@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 // import {ArrowDownCircle} from 'react-bootstrap-icons'
 import { BsDownload } from "react-icons/bs";
@@ -15,14 +15,7 @@ function Banner() {
      const [delta, setDelta] = useState(300 - Math.random() * 100); 
      const period =3000
 
-     useEffect(() => {
-       let ticker = setInterval(() => {
-          tick()
-       }, delta)
-     
-       return () => {clearInterval(ticker)}
-     }, [text])
-
+    
      const tick = ()=>{
           let i = loopNum % toRotate.length;
           let fullText = toRotate[i];
@@ -43,7 +36,17 @@ function Banner() {
               setDelta(300)
           }
      }
-     
+     useEffect(() => {
+        let ticker = setInterval(() => {
+          tick();
+        }, delta);
+
+        return () => {
+          clearInterval(ticker);
+        };
+      });
+
+
 
   return (
     <div className={styles.banner} id={'home'}>
@@ -51,7 +54,7 @@ function Banner() {
                <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7} >
                          <span className={styles.tagline}>Welcome to My Portfolio</span>
-                         <h1>{`Hi I'm David`} </h1>
+                         <h1>{`Hi I'm David,`} </h1>
                          <div className={styles.rollTextWrap}>
                               <h1><span className={styles.wrap}>{text}</span></h1>
                          </div>
