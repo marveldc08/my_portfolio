@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap'
 import styles from './Projects.module.css'
 import ProjectCard from './ProjectCard'
@@ -178,7 +179,7 @@ function Projects() {
                     </Col>
                </Row>
           </Container>
-          <img className={styles.backgroundImgRight} src="/images/color-sharp2.png" alt="color gradient" />
+          <Image className={styles.backgroundImgRight} src="/images/color-sharp2.png" width={500} height={100} alt="color gradient" />
     </section>
   )
 }

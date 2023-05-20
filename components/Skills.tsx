@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import styles from './SKills.module.css'
+import styles from './Skills.module.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from 'react-bootstrap';
@@ -8,6 +8,7 @@ import CircularProgress, {
    } from '@mui/material/CircularProgress';
    import Typography from '@mui/material/Typography';
    import Box from '@mui/material/Box';
+import Image from 'next/image';
 
 
 const CircularProgressWithLabel = ( props: CircularProgressProps & { value: number },) => {
@@ -41,7 +42,6 @@ function Skills() {
 
      const responsive = {
           superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5
           },
@@ -103,7 +103,7 @@ function Skills() {
                     </Col>
                </Row>
           </Container>
-          <img className={styles.backgroundImgLeft} src="/images/color-sharp.png" alt="" />
+          <Image className={styles.backgroundImgLeft} width={500} height={100}src="/images/color-sharp.png" alt="" />
     </section>
   )
 }

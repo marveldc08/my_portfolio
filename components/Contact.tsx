@@ -5,6 +5,7 @@ import { TiThumbsUp, TiThumbsDown } from "react-icons/ti";
 import style from './Contact.module.css'
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
+import Image from 'next/image';
 
 function Contact() {
      const formInitialDetails ={
@@ -93,7 +94,7 @@ function Contact() {
           <Container>
                <Row className='align-items-center' >
                     <Col md={6}>
-                         <img src="/images/contact-img.svg" alt="contact image" />
+                         <Image src="/images/contact-img.svg" width={500} height={100} alt="contact image" />
                     </Col>
                     <Col md={6}>
                          <h2>Get In Touch</h2>
