@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import { GrSend } from "react-icons/gr";
+import { BiSend } from "react-icons/bi";
 import { TiThumbsUp, TiThumbsDown } from "react-icons/ti";
 import style from './Contact.module.css'
 import emailjs from '@emailjs/browser';
@@ -37,7 +37,7 @@ function Contact() {
                headers: {
                     "Content-Type": "Application/json; charset: utf-8"
                },
-               body: JSON.stringify(formDetails)
+               body: JSON.stringify(formDetails) //formDetails is all that the user input
           })
           setButtonText("Send")
           let result = response.json();
@@ -52,12 +52,15 @@ function Contact() {
 
      const sendEmail = (e) => {
        e.preventDefault();
+       //this part is for showing error
        if (formDetails === formInitialDetails) {
           setShowError(true)
        } else {
           setShowError(false)
           setButtonText("Sending...")
-
+     
+          /////This part is the function
+          ///install the emailjs package
        emailjs.sendForm('service_hqj50cn', 'marvel_icnzyn4', form.current, 'MTbF9ST0pP3Kpt_v-')
          .then((result) => {
              console.log(result.text);
@@ -70,9 +73,9 @@ function Contact() {
           title: 'SENT',
           icon: 'success',
           html:
-            'Your message has been <b>sent Successfully</b>, ' +
+            'Hello There, ' +
             'Thank You for reaching out to Me. ' + '<b/>' +
-            'My reply would be in your email inbox.',
+            'I look forward to doing great projects with You.',
           showCloseButton: true,
           showCancelButton: true,
           focusConfirm: false,
@@ -117,7 +120,7 @@ function Contact() {
                                    </Col>
                                    <Col>
                                         <textarea name="message" id="message" required value={formDetails.message} cols={30} rows={6} placeholder="message" onChange={(e)=> onFormUpdate('message', e.target.value)}></textarea>
-                                        <button type='submit' ><span>{buttonText}</span> <GrSend style={{marginLeft:'10px', color:'inherit'}}/>  </button>
+                                        <button type='submit' ><span>{buttonText} <BiSend style={{marginLeft:'10px'}}/></span>   </button>
                                    </Col>
                                    {/* {
                                         status.message &&

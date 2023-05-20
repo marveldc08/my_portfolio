@@ -91,3 +91,11 @@
      margin-bottom: 2rem;
      border-radius: 10px;
    }
+
+   @media screen and (max-width: 768px){
+    .contact form button {
+      width: 100%;
+      padding: 11px 40px;
+      font-size: 19px;
+   }
+   }

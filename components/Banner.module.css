@@ -65,12 +65,17 @@
      transition: 0.3s ease-in-out;
      line-height: 1;
 }
-.banner a:hover svg {
-     margin-left: 25px;
-}
+/* .banner a:hover svg {
+     width: 50%;
+} */
 .banner img {
      animation: updown 3s linear infinite;
 }
+ .rollTextWrap{
+          margin-top: -15px;
+          margin-bottom: 40px;
+          height: 3rem;
+     } 
 .downloadBtn{
      font-weight: 700;
      letter-spacing: 0.8px;
@@ -82,6 +87,10 @@
      margin-bottom: 16px;
      display: inline-block;
      width: 30%;
+}
+.downloadBtn:hover{
+     background: transparent;
+     color: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
 }
 @keyframes updown {
      0% {
@@ -97,3 +106,64 @@
 .txt-rotate > .wrap {
      border-right: 0.08em solid #666;
 }
+
+@media screen and (max-width : 768px) {
+     .banner h1 span {
+          font-size: 30px;
+          font-weight: 500;
+          margin-bottom: 2px;
+          line-height: 0;
+          
+     }
+     .rollTextWrap{
+          margin-top: -15px;
+          height: 3rem;
+          align-items: flex-start;
+
+     }
+     .banner h1{
+          font-size: 45px;
+          font-weight: 600;
+          letter-spacing: 0.6px;
+          line-height: 1;
+          margin-bottom: 20px;
+     }
+     .banner{
+          padding: 100px 5px 10px ;
+     }
+     .downloadBtn{
+          font-size: 18px;
+          width: 60%;
+     }
+}
+@media screen and (max-width : 468px){
+         .banner h1 span {
+               font-size: 26px;
+               font-weight: 500;
+               margin-bottom: 1px;
+               
+          }
+          .content{
+               font-size: 18px;
+               padding: 20px;
+          }
+          .banner h1{
+               font-size: 39px;
+          }
+}
+
+      @media screen and (min-width: 768px)and (max-width: 1024px){
+             .downloadBtn{
+                    font-size: 18px;
+                    width: 90%;
+              }
+               .banner h1 span {
+                    font-size: 39px;
+                    font-weight: 500;
+                    margin-bottom: 1px;
+                    
+               }
+                .banner h1{
+                    font-size: 53px;
+               }
+      }

@@ -23,7 +23,7 @@ function NavBar() {
      useEffect(() => {setIsServer(false)}, [])
      useEffect(() => {
           const onScroll = () => {
-               if (isServer && window.scrollY > 60) {
+               if (isServer && window.scrollY > 50) {
                     setScrolled(true)
                }else{
                     setScrolled(false)
@@ -34,13 +34,14 @@ function NavBar() {
      }, [])
   return (
      <Navbar expand="lg" className={scrolled ? styles.navbarScrolled : styles.navbar}>
-      <Container>
-        <Navbar.Brand className={styles.navbarBrand} href="#home">
-          <Image src={'/images/david-chinye-logo.png'} alt='Logo' width={200} height={200} />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav  className="me-auto">
+      <Container id={"container"} style={{ width:"100%"}}>
+        {/* <div className={styles.navbarBrand} >
+          <img src={'/images/david-chinye-logo.png'} alt='Logo'  />
+        </div> */}
+        <Navbar.Toggle className={styles.navbarToggle} aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className={styles.collapse} style={{width:"50%",  justifyContent:"space-between",alignItems:"center"}}>
+          
+          <Nav  className="dropdown">
             <Nav.Link href="#home" className={activeLink === 'home' ? styles.activeNavbarLink : styles.navLink} onClick={()=> setActiveLink('home')} >Home</Nav.Link>
             <Nav.Link href="#skills" className={activeLink === 'skills' ? styles.activeNavbarLink : styles.navLink} onClick={()=> setActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#projects" className={activeLink === 'projects' ? styles.activeNavbarLink : styles.navLink} onClick={()=> setActiveLink('projects')}>Projects</Nav.Link>
@@ -53,8 +54,8 @@ function NavBar() {
                     <Link className={styles.socialIconLink} target='_blank' href={'https://github.com/marveldc08'}><img src={'/images/github.svg'} alt='icon'  /></Link>
                </div>
           </div>
-          <Link href={'#connect'}>
-               <Button className={styles.navbarTextButton}> <span className={styles.navbarTextButtonSpan} >Let's Connect</span> </Button>
+          <Link className={styles.navConnect} href={'#connect'}>
+               <Button className={styles.navbarTextButton}> <span className={styles.navbarTextButtonSpan} > {`Let's Connect`}</span> </Button>
           </Link>
         </Navbar.Collapse>
       </Container>

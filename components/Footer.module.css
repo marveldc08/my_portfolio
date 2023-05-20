@@ -90,4 +90,18 @@
      margin-top: 20px;
      margin-left: 2em;
    }
+   .contentWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   @media screen and (max-width: 768px){
+    .contentWrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+   }
    

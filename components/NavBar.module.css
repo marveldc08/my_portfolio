@@ -1,13 +1,19 @@
    /************ Navbar Css ************/
+   #container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+   }
    nav.navbar {
      padding: 18px 0;
      position: fixed;
-     width: 100%;
+     width: 100vw;
      top: 0;
      z-index: 9999;
      transition:  0.32s ease-in-out;
      display: flex !important;
-     justify-content: space-between !important;
+     justify-content: space-evenly !important;
      align-items: center !important;
    }
    .navbarScrolled {
@@ -22,7 +28,7 @@
      justify-content: space-between !important;
      align-items: center !important;
    }
-   nav.navbar a.navbarBrand {
+   nav.navbar div .navbarBrand {
        width: 9%;
    }
    .navLink{
@@ -57,8 +63,11 @@
        align-items: center;
    }
    .socialIcon {
-       display: inline-block;
-       margin-left: 14px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+        width: 210px;
+       /* margin-left: 14px; */
    }
    .socialIconLink {
        width: 42px;
@@ -69,6 +78,7 @@
        margin-right: 6px;
        align-items: center;
        justify-content: center;
+       align-self: flex-end;
        line-height: 1;
        border: 1px solid rgba(255, 255, 255, 0.5);
    }
@@ -133,14 +143,17 @@
         outline: none;
        box-shadow: none;
    }
-   nav.navbar .navbar-toggler-icon {
-     width: 24px;
+   /* nav.navbar.navbar-toggler-icon  */
+   .navbarToggle{
+     /* width: 24px;
      height: 17px;
      background-image: none;
      position: relative;
      border-bottom: 2px solid #fff;
      transition: all 300ms linear;
-     top: -2px;
+     top: -2px; */
+     /* border: 1px solid red ; */
+     background-color: #fff !important ;
    }
    nav.navbar .navbar-toggler-icon:focus {
         border-bottom: 2px solid #fff;
@@ -173,3 +186,58 @@
    nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         border-color: transparent;
    }
+
+   @media screen and (max-width: 768px){
+     nav.navbar {
+          padding: 18px 0;
+          position: fixed;
+          background-color: #121212;
+          /* color:#121212; */
+          width: 100%;
+          top: 0;
+          z-index: 9999;
+          transition:  0.32s ease-in-out;
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+        }
+        .navText{
+          display: none;
+        }
+        .navConnect{
+          display:none;
+        }
+
+        .navLink{
+          margin-top: 15px;
+          margin-left: 5px;
+        }
+        .activeNavbarLink{
+          margin-top: 15px;
+          margin-left: 7px;
+          padding: 6px 25px;
+        }
+        .navbarScrolled{
+          /* display: flex !important; */
+          /* padding: 18px 0; */
+          /* background-color: #121212; */
+          position: fixed !important;
+          width: 100%;
+          top: 0;
+          z-index: 9999;
+          justify-content: space-between !important;
+          align-items: center !important;
+          /* border: 1px solid red; */
+        }
+        nav.navbar div .navbarBrand {
+            width: 50%;
+        }
+   }
+      @media screen and (min-width: 768px)and (max-width: 1024px){
+        .navText{
+          display: none;
+        }
+        .navConnect{
+          display:none;
+        }
+      }
